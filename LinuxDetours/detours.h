@@ -23,11 +23,11 @@
 #undef DETOURS_32BIT
 #undef DETOURS_64BIT
 
-#if defined(_X86_)
+#if defined(_X86_) || defined(__i386__)
 #define DETOURS_X86
 #define DETOURS_OPTION_BITS 64
 
-#elif defined(_AMD64_)
+#elif defined(_AMD64_) || defined(__amd64__)
 #define DETOURS_X64
 #define DETOURS_OPTION_BITS 32
 
